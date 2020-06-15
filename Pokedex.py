@@ -3,6 +3,15 @@ class Pokedex:
     def __init__(self):
         print "Implement me"
 
+class Read_Pokemon_Data:
+
+    def _init_(self):
+        self.pokemons = []
+
+    def 
+
+
+class Display_Pokemon_Data:
 
 # # We can read a JSON file using:
 # import json
