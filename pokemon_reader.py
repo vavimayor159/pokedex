@@ -13,9 +13,9 @@ class PokemonReader:
 
 class Pokemon:
 
-    def __init__(self, pokemonData=None):
+    def __init__(self, pokemonData = None):
         if (pokemonData != None):
-            self.name = pokemonData["name"]
+            self.name = pokemonData["name"]["english"]
             self.id   = pokemonData["id"]
             self.type = pokemonData["type"]
             self.base = pokemonData["base"]
@@ -25,4 +25,6 @@ class Pokemon:
             self.type = ""
             self.base = ""
         pass
+
+
    

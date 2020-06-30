@@ -1,17 +1,40 @@
+from pokemon_reader import PokemonReader 
+from pokemon_reader import Pokemon
+
 class Pokedex:
-
     def __init__(self):
-        print "Implement me"
+        self.pokemonsList = PokemonReader('pokedex.json').readData()
+        self.pokemonSearched = []
+        #print(self.pokemonsList[801])
 
-class Read_Pokemon_Data:
+        """ for number in range(len(self.pokemonsList)):
+            print 
+            if self.pokemonsList[number]['id'] == 802:
+                print(self.pokemonsList[number])
+                break
+ """
+    def IDsearch(self,id):
+        for number in range(len(self.pokemonsList)):
+            if self.pokemonsList[number]['id'] == id:
+                self.PokemonSearched = Pokemon( self.pokemonsList[number])
+                print(self.PokemonSearched.name)
 
-    def _init_(self):
-        self.pokemons = []
+if __name__ == '__main__':
+    pokedexOn = Pokedex()
+    while True:
+        try:
+            numero = int(input('Id: '))
+            if numero in range(len(pokedexOn.pokemonsList)):
+                pokedexOn.IDsearch(numero)
+                
+            else:
+                print('No valido')
+        except ValueError:
+            print('No valido')
 
-    def 
 
 
-class Display_Pokemon_Data:
+
 
 # # We can read a JSON file using:
 # import json
